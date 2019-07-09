@@ -27,6 +27,7 @@ class Login extends Component {
   }
 
   register() {
+    console.log('register')
     const { register, history } = this.props;
     const { username, password } = this.state;
     register({ username, password }, history);

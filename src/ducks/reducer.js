@@ -71,9 +71,11 @@ export function login( obj, history ) {
 }
 
 export function register( obj, history ) {
+  console.log('register-reducer', obj)
   return {
     type: REGISTER,
     payload: axios.post( URL.register, obj ).then( response => {
+      console.log('response')
       history.push('/shop');
       return response.data;
     })
